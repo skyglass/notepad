@@ -1,8 +1,8 @@
-# Set the base image to java8
-FROM openjdk:8-alpine
+# Set the base image to java11
+FROM adoptopenjdk/openjdk11:latest
 
 # File Author / Maintainer
-MAINTAINER Jorge Acetozi
+MAINTAINER Skyglass
 
 # Define default environment variables
 ENV NOTEPAD_HOME=/opt/notepad
