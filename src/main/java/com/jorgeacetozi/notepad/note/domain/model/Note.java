@@ -18,6 +18,8 @@ public class Note {
 	@NotEmpty
 	private String title;
 
+	private String subtitle;
+
 	@NotEmpty
 	private String content;
 
@@ -31,12 +33,22 @@ public class Note {
 		this.content = content;
 	}
 
+	public Note(String title, String subtitle, String content) {
+		this.title = title;
+		this.subtitle = subtitle;
+		this.content = content;
+	}
+
 	public Integer getId() {
 		return id;
 	}
 
 	public String getTitle() {
 		return title;
+	}
+
+	public String getSubtitle() {
+		return subtitle;
 	}
 
 	public String getContent() {
@@ -49,6 +61,7 @@ public class Note {
 
 	@Override
 	public String toString() {
-		return "Note [id=" + id + ", title=" + title + ", content=" + content + ", wordCount=" + this.getWordCount() + "]";
+		return "Note [id=" + id + ", title=" + title + ", subtitle=" + subtitle + ", content=" + content
+				+ ", wordCount=" + this.getWordCount() + "]";
 	}
 }
