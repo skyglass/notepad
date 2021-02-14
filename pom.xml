@@ -4,7 +4,7 @@
 
 	<groupId>skyglass</groupId>
 	<artifactId>notepad</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOTT</version>
 	<packaging>jar</packaging>
 
 	<name>notepad</name>
