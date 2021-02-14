@@ -32,6 +32,13 @@ public class NoteTest {
 	}
 
 	@Test
+	public void shouldNotRaiseViolationWhenTitleSubtitleAndContentAreFilled() {
+		Note note = new Note("Unit Tests", "JUnit Framekwork", "Unit tests provide fast feedback");
+		Set<ConstraintViolation<Note>> constraintViolations = validator.validate(note);
+		assertThat(constraintViolations.size()).isEqualTo(0);
+	}
+
+	@Test
 	public void shouldRaiseViolationWhenTitleIsEmpty() {
 		Note note = new Note("", "Unit tests provide fast feedback");
 		Set<ConstraintViolation<Note>> constraintViolations = validator.validate(note);

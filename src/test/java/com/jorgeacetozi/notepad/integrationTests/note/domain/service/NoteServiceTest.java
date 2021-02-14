@@ -40,4 +40,12 @@ public class NoteServiceTest {
 		assertThat(createdNote.getId()).isNotNull();
 		assertThat(createdNote.getWordCount()).isEqualTo(5);
 	}
+
+	@Test
+	public void shouldCreateNoteWithTitleSubtitleAndContent() {
+		note = new Note("Kubernetes", "Easy Container Orchestration", "Best container orchestration tool ever");
+		Note createdNote = noteService.create(note);
+		assertThat(createdNote.getId()).isNotNull();
+		assertThat(createdNote.getWordCount()).isEqualTo(5);
+	}
 }
